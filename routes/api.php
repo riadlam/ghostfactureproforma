@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\WooCommerceController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +22,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::post('/checkout', [CheckoutController::class, 'store']);
+Route::post('/woocommerce/checkout', [WooCommerceController::class, 'handleCheckout']);
