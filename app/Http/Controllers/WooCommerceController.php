@@ -75,4 +75,12 @@ class WooCommerceController extends Controller
             ], 500);
         }
     }
+    public function testing(Request $request)
+    {
+        
+		\Log::info('This is a test log!');
+
+        // Log the HTTP Method
+       \Log::info('Request Data:', $request->all());
+    }
 }

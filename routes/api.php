@@ -23,7 +23,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('/checkout', [CheckoutController::class, 'store']);
 Route::get('/woocommerce/checkout', [WooCommerceController::class, 'handleCheckout']);
+Route::post('/woocommerce/checkout', [WooCommerceController::class, 'testing']);
 
-Route::get('/test-post', function () {
+Route::post('/test-post', function () {
     return response()->json(['status' => 'POST method works']);
 });
